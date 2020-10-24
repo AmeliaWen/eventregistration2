@@ -9,3 +9,4 @@
 
 rootProject.name = 'eventregistration2'
 include ':EventRegistration-Backend'
+include ':eventregistration-frontend'
