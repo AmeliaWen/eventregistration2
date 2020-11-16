@@ -3,16 +3,16 @@ var path = require('path')
 
 module.exports = {
   build: {
-	  port: 443,
-	  host: 'eventregistration-frontend-c.herokuapp.com',
-	  backendHost: 'eventregistration-backend-c.herokuapp.com',
-    backendPort: 443,
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
+    host: 'eventregistration-frontend-c.herokuapp.com',
+    port: 443,
+    backendHost: 'eventregistration-backend-c.herokuapp.com',
+    backendPort: 443,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -28,13 +28,13 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8087,
+    host: '127.0.0.1',
+    backendHost: '127.0.0.1',
+    backendPort: 5432,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
-	  host: '127.0.0.1',
-	  backendHost: '127.0.0.1',
-    backendPort: 8080,
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
