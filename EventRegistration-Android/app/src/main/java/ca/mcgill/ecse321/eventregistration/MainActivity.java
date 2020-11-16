@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     error += e.getMessage();
                 }
+                tv.setText(error);
                 refreshErrorMessage();
             }
         });
